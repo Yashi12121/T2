@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YashiX - Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto+Mono:wght@700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            font-weight: 900;
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px 20px; /* ลด padding */
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 10;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 80px; /* ลดจาก 110px */
+            color: #fff;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.4);
+            letter-spacing: 5px; /* ลดจาก 8px */
+            animation: neonPulse 1.8s infinite ease-in-out;
+            font-weight: 900;
+            transform: perspective(600px) rotateX(15deg) translateZ(15px); /* ลด translateZ จาก 20px */
+            position: relative;
+        }
+
+        @keyframes neonPulse {
+            0%, 100% { text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.4); }
+            50% { text-shadow: 0 0 25px rgba(255, 255, 255, 0.9), 0 0 50px rgba(255, 255, 255, 0.6); }
+        }
+
+        .nav-menu {
+            margin: 20px 0; /* ลดจาก 30px */
+            display: flex;
+            justify-content: center;
+            gap: 30px; /* ลดจาก 45px */
+            padding: 15px 0; /* ลดจาก 20px */
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 40px; /* ลดจาก 60px */
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            transform: perspective(400px) rotateX(10deg);
+            z-index: 10;
+            position: relative;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px; /* ลดจาก 24px */
+            padding: 8px 25px; /* ลด padding */
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px; /* ลดจาก 2.5px */
+            position: relative;
+            border-radius: 20px; /* ลดจาก 30px */
+            overflow: hidden;
+            z-index: 1;
+            font-weight: 900;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2); /* ลดเงา */
+        }
+
+        .nav-menu a:hover {
+            color: #000;
+            background: #fff;
+            transform: translateZ(5px); /* ลดจาก 10px */
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.6); /* ลดเงา */
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 80px 20px; /* ลดจาก 100px */
+            animation: fadeIn 1.5s ease-out;
+            z-index: 10;
+            position: relative;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); } /* ลดจาก 30px */
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .main-content h1 {
+            font-size: 90px; /* ลดจาก 120px */
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 20px; /* ลดจาก 25px */
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+            letter-spacing: 5px; /* ลดจาก 7px */
+            animation: glowPulse 2s infinite;
+            font-weight: 900;
+            transform: perspective(700px) rotateX(5deg) translateZ(10px); /* ลด translateZ จาก 15px */
+        }
+
+        @keyframes glowPulse {
+            0%, 100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.6); }
+            50% { text-shadow: 0 0 30px rgba(255, 255, 255, 0.9); }
+        }
+
+        .main-content p {
+            font-size: 22px; /* ลดจาก 28px */
+            color: #fff;
+            margin-bottom: 40px; /* ลดจาก 50px */
+            font-family: 'Roboto Mono', monospace;
+            letter-spacing: 1.5px; /* ลดจาก 2px */
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+            transform: perspective(300px) rotateX(3deg);
+        }
+
+        .download-btn {
+            padding: 15px 50px; /* ลดจาก 22px 70px */
+            background: #fff;
+            border: none;
+            border-radius: 40px; /* ลดจาก 60px */
+            cursor: pointer;
+            font-size: 22px; /* ลดจาก 28px */
+            color: #000;
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.5); /* ลดเงา */
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 2.5px; /* ลดจาก 3.5px */
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            font-weight: 900;
+            transform: perspective(800px) rotateX(8deg) translateZ(20px); /* ลด translateZ จาก 25px */
+        }
+
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(0, 0, 0, 0.3), transparent);
+            transition: all 0.5s ease;
+            z-index: -1;
+        }
+
+        .download-btn:hover::before {
+            left: 100%;
+        }
+
+        .download-btn:hover {
+            background: #000;
+            color: #fff;
+            transform: perspective(800px) rotateX(8deg) translateZ(25px); /* ลดจาก 35px */
+            box-shadow: 0 15px 35px rgba(255, 255, 255, 0.7); /* ลดเงา */
+        }
+
+        .background-effects {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .moving-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 0%, transparent 60%); /* ลดขนาด gradient */
+            animation: bgMove 15s infinite linear; /* ลดเวลาเหลือ 15s */
+            opacity: 0.6; /* ลด opacity */
+            z-index: -2;
+        }
+
+        @keyframes bgMove {
+            0% { transform: scale(1) translate(0, 0); }
+            25% { transform: scale(1.05) translate(-50px, -50px); } /* ลดระยะการขยับ */
+            50% { transform: scale(1.1) translate(50px, 50px); }
+            75% { transform: scale(1.05) translate(-50px, 50px); }
+            100% { transform: scale(1) translate(0, 0); }
+        }
+
+        .particle {
+            position: absolute;
+            width: 8px; /* ลดจาก 10px */
+            height: 8px;
+            background: #fff;
+            border-radius: 50%;
+            animation: float 4s infinite ease-in-out, pulse 1.2s infinite;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* ลดเงา */
+            transform: perspective(500px) rotateX(20deg);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0) perspective(500px) rotateX(20deg); opacity: 0.5; }
+            50% { transform: translateY(-50px) translateX(40px) perspective(500px) rotateX(20deg); opacity: 1; } /* ลดระยะ */
+            100% { transform: translateY(0) translateX(0) perspective(500px) rotateX(20deg); opacity: 0.5; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1) perspective(500px) rotateX(20deg); }
+            50% { transform: scale(1.2) perspective(500px) rotateX(20deg); } /* ลดการขยาย */
+        }
+
+        .ripple {
+            position: absolute;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent); /* ลดความเข้ม */
+            border-radius: 50%;
+            animation: rippleEffect 1s ease-out;
+            pointer-events: none;
+            transform: perspective(600px) rotateX(10deg);
+        }
+
+        @keyframes rippleEffect {
+            0% { width: 0; height: 0; opacity: 1; }
+            100% { width: 250px; height: 250px; opacity: 0; } /* ลดขนาดจาก 350px */
+        }
+
+        .line-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(135deg, transparent, transparent 30px, rgba(255, 255, 255, 0.02) 30px, rgba(255, 255, 255, 0.02) 32px); /* ลดขนาด */
+            opacity: 0.4; /* ลด opacity */
+            z-index: -2;
+            animation: lineShift 12s linear infinite; /* ลดเวลา */
+            transform: perspective(1000px) rotateX(5deg);
+        }
+
+        @keyframes lineShift {
+            0% { background-position: 0 0; }
+            100% { background-position: 32px 32px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">YX</div>
+    </div>
+    <div class="nav-menu">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#features">Features</a>
+        <a href="#sources">Sources</a>
+        <a href="https://discord.gg/jXJta9VT7U" target="_blank">Discord</a>
+    </div>
+    <div class="main-content">
+        <h1>YashiX</h1>
+        <p>Discover the next level of YashiX!</p>
+        <a href="https://files.catbox.moe/d7zxkr.rar" class="download-btn" download>Download YashiX</a>
+    </div>
+
+    <div class="background-effects">
+        <div class="moving-background"></div>
+        <div class="line-grid"></div>
+        <script>
+            function createParticles(count) {
+                const effectsContainer = document.querySelector('.background-effects');
+                for (let i = 0; i < count; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = Math.random() * 100 + 'vw';
+                    particle.style.top = Math.random() * 100 + 'vh';
+                    particle.style.animationDelay = Math.random() * 4 + 's';
+                    particle.style.animationDuration = Math.random() * 3 + 3 + 's';
+                    effectsContainer.appendChild(particle);
+                }
+            }
+
+            // Ripple effect on click
+            document.addEventListener('click', (e) => {
+                const ripple = document.createElement('div');
+                ripple.className = 'ripple';
+                ripple.style.left = e.pageX + 'px';
+                ripple.style.top = e.pageY + 'px';
+                document.querySelector('.background-effects').appendChild(ripple);
+                setTimeout(() => ripple.remove(), 1000);
+            });
+
+            // Particle burst on button hover
+            document.querySelector('.download-btn').addEventListener('mouseenter', () => {
+                const btn = document.querySelector('.download-btn');
+                const rect = btn.getBoundingClientRect();
+                for (let i = 0; i < 8; i++) { /* ลดจาก 12 */
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = (rect.left + rect.width / 2) + 'px';
+                    particle.style.top = (rect.top + rect.height / 2) + 'px';
+                    particle.style.animation = 'float 1.5s ease-out'; /* ลดเวลา */
+                    document.querySelector('.background-effects').appendChild(particle);
+                    setTimeout(() => particle.remove(), 1500);
+                }
+            });
+
+            // Mouse trail
+            document.addEventListener('mousemove', (e) => {
+                const trail = document.createElement('div');
+                trail.className = 'particle';
+                trail.style.left = e.pageX + 'px';
+                trail.style.top = e.pageY + 'px';
+                trail.style.animation = 'float 1s ease-out'; /* ลดเวลา */
+                trail.style.opacity = '0.5'; /* ลด opacity */
+                document.querySelector('.background-effects').appendChild(trail);
+                setTimeout(() => trail.remove(), 1000);
+            });
+
+            window.onload = function() {
+                createParticles(50); /* ลดจาก 70 */
+            };
+        </script>
+    </div>
+</body>
+</html>
